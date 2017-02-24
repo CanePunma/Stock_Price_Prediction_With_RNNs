@@ -6,14 +6,15 @@ Recurrent Neural Networks with LSTMs are known to be particularly good with temp
 
 ## Code Example:
 The code is separated into two objectives Forex price prediction daily and Intraday price prediction (30 min, 15 min, 5 min, etc.) The parts of code that attribute to each objective is document A. or B. in the notebook where A is for the Forex and B is for the Intraday prediction.
-  ### A.	Forex
+
+#### A.	Forex
     a.	Daily Data is pulled from Yahoo’s Data Reader
     b.	Only the training set is preprocessed because we create a separate test set later on
     c.	“model_forex” is the model for to build and train.
     d.	Create separate daily test set by specifying dates which start after your training set ends.
     e.	You can see “model_forex” is plugged in here for running the prediction
         predicted_st = predict_standard(X_test_stock,y_test_stock, model_forex)
-  ### B.	Intraday
+####  B.	Intraday
     a.	Intraday Data is pulled from Google’s API. The second argument is the time in seconds (900 secs = 15 mins) and the third                argument it the number of days, the max backtrack day for Googles API is 15 days I believe.
          df = get_google_data(INTRA_DAY_TICKER, 900, 150)
     b.	Preprocess the full set of data and train test split it with “train_test_split_intra”
