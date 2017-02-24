@@ -1,4 +1,4 @@
-# Stock_Price_Prediction_With_RNNs
+# Stock Price Prediction With Reccurent Neural Networks (RNNs)
 
 ## Synopsis:
 Recurrent Neural Networks with LSTMs are known to be particularly good with temporal data which is why they are effective with speech recognition. Good explanations of RNNs and LSTMs can be found here http://karpathy.github.io/2015/05/21/rnn-effectiveness/ and http://colah.github.io/posts/2015-08-Understanding-LSTMs/.  With Yahoo data reader for daily prices and Google’s API for Intraday Prices we used the Open, Close, High, Low attributes for sequences of 25 to be able to predict the next time periods Close. Each sequence was passed through a Gaussian distribution and the 2 Layer LSTM models were trained on that data. 
